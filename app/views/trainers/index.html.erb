@@ -16,6 +16,7 @@
                 <td><%= trainer.sex%></td>
                 <td><%= trainer.money%></td>
                 <td><%= trainer.gym_leader%></td>
+                <td><%= link_to "ver detalles", trainer_path(trainer.id)%></td>
             <tr>
         <%end%>
     </tbody>
