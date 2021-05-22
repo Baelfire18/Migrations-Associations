@@ -10,9 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_05_21_235815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "movements", force: :cascade do |t|
+    t.string "name"
+    t.integer "power"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pokemons", force: :cascade do |t|
+    t.string "name"
+    t.string "kind"
+    t.integer "trainerID"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "attack"
+    t.integer "defense"
+    t.float "speed"
+  end
+
+  create_table "trainers", force: :cascade do |t|
+    t.string "name"
+    t.string "sex"
+    t.bigint "money"
+    t.boolean "gym_leader", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

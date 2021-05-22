@@ -9,16 +9,17 @@
             <th> Defensa </th>
             <th> Velocidad </th>
             <th> ID entrenador </th>
+            <th> Ver Detalles </th>
         <tr>
     <thead>
     <tbody>
         <% @pokemons.each do |pokemon|%>
             <tr>
                 <td><%= pokemon.name%></td>
-                <td><%= pokemon.type%></td>
+                <td><%= pokemon.kind%></td>
                 <td><%= pokemon.attack%></td>
                 <td><%= pokemon.defense%></td>
-                <%# <td><%= pokemon.speed%></td> %>
+                <td><%= pokemon.speed%></td>
                 <td><%= pokemon.trainerID%></td>
                 <td><%= link_to "ver detalles", pokemon_path(pokemon.id)%></td>
             <tr>
