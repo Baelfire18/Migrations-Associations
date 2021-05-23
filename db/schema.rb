@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_21_235815) do
+ActiveRecord::Schema.define(version: 2021_05_22_183951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,15 +22,21 @@ ActiveRecord::Schema.define(version: 2021_05_21_235815) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "movements_pokemons", id: false, force: :cascade do |t|
+    t.bigint "pokemon_id", null: false
+    t.bigint "movement_id", null: false
+  end
+
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
     t.string "kind"
-    t.integer "trainerID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "attack"
     t.integer "defense"
     t.float "speed"
+    t.bigint "trainer_id"
+    t.index ["trainer_id"], name: "index_pokemons_on_trainer_id"
   end
 
   create_table "trainers", force: :cascade do |t|
@@ -42,4 +48,5 @@ ActiveRecord::Schema.define(version: 2021_05_21_235815) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "pokemons", "trainers"
 end
