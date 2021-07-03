@@ -1,24 +1,13 @@
-# README
+# Help Out Guide Migrations & Asociations on Ruby On Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was made for the course `Ingeniería de Software (IIC2143-2021-1)` of [Pontificia Universidad Católica](https://www.uc.cl/) and it explains Migrations, Asociation and Seeds usign the Model–view–controller software design pattern
+on the Ruby [![Ruby](https://cdn.emojidex.com/emoji/mdpi/Ruby.png "Ruby") ](https://www.ruby-lang.org) framework `On Rails`.
 
-Things you may want to cover:
+The `.pdf` presentation covers the general stuff and also there is [a video](https://drive.google.com/drive/folders/1LEh9cqNofGK4BVokHFBalsIlSd8wWoOf?usp=sharing) explaining it.
 
-* Ruby version
+The views where made in Spanish and the PSQL database in English.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Authors | Github | Email |
+| --- | --- | --- |
+| José Antonio Castro | [@Baelfire18](https://github.com/Baelfire18) | jacastro18@uc.cl |
+| Felipe Fuentes | [@felipefuentesporras](https://github.com/felipefuentesporras) | ffuentep@uc.cl  |
